@@ -8,6 +8,7 @@ public class UpdateUI extends BaseUI {
 
 	@Override
 	public void execute() throws Exception {
+		String title = scanStr("수정할 제목입력");
 	}
 
 }

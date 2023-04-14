@@ -5,7 +5,7 @@ import java.util.List;
 
 import kr.ac.kopo.vo.BoardVO;
 
-public class BoardDAO {
+public class BoardDAO{
 
 	private List<BoardVO> boardList;
 	
@@ -15,6 +15,16 @@ public class BoardDAO {
 	
 	public void insertBoard(BoardVO board) {
 		boardList.add(board);
+	}
+	
+	public BoardVO searchByNo(int no) {
+		
+		for(BoardVO board : boardList) {
+			if(board.getNo() == no)
+				return board;
+		}
+		return null;
+		
 	}
 	
 }
