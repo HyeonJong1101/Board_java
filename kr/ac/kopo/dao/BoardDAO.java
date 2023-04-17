@@ -27,4 +27,8 @@ public class BoardDAO{
 		
 	}
 	
+	public List<BoardVO> selectAllBoard(){
+		return boardList;
+	}
+	
 }

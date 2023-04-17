@@ -30,6 +30,7 @@ public class BoardUI extends BaseUI{
 			switch (type) {
 			case 1:
 				System.out.println("전체게시글 조회를 선택");
+				ui = new SearchAllUI();
 				break;
 			case 2:
 				System.out.println("글번호 조회를 선택");

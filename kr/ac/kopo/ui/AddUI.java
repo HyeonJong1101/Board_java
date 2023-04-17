@@ -1,15 +1,16 @@
 package kr.ac.kopo.ui;
 
-import kr.ac.kopo.dao.BoardDAO;
+import kr.ac.kopo.BoardServiceFactory;
+import kr.ac.kopo.service.BoardService;
 import kr.ac.kopo.vo.BoardVO;
 
 public class AddUI extends BaseUI{
 
-	private BoardDAO boardDao;
+	private BoardService boardService;
 	
 	public AddUI() {
 		super();
-		boardDao = new BoardDAO();
+		boardService = BoardServiceFactory.getInstance();
 	}
 
 	@Override
@@ -22,7 +23,7 @@ public class AddUI extends BaseUI{
 		board.setTitle(title);
 		board.setWriter(writer);
 		
-		boardDao.insertBoard(board);
+		boardService.insertBoard(board);
 		
 		System.out.println("새글 등록 완료...");
 	}
